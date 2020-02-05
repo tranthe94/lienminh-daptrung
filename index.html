@@ -165,8 +165,8 @@
           <div class="item-title">
             1 trứng nhóm 3
           </div>
-          <div class="item-btn">
-           <a href="#"><b>Mua với </b> <span> 16 </span> <img src="./images/rp.png" alt="rp"></a>
+          <div class="item-btn" data-toggle="modal" data-target="#mua-trung">
+           <a><b>Mua với </b> <span> 16 </span> <img src="./images/rp.png" alt="rp"></a>
           </div>
           <div class="item-turn">
             Còn 4 lượt
@@ -182,8 +182,8 @@
           <div class="item-title">
             1 trứng nhóm 3
           </div>
-          <div class="item-btn">
-            <a href="#"><b>Mua với </b> <span>80</span><img src="./images/rp.png" alt="rp"></a>
+          <div class="item-btn" data-toggle="modal" data-target="#mua-trung">
+            <a><b>Mua với </b> <span>80</span><img src="./images/rp.png" alt="rp"></a>
           </div>
           <div class="item-turn">
             Còn 4 lượt
@@ -199,8 +199,8 @@
           <div class="item-title">
             <span>5+1</span> trứng nhóm 3
           </div>
-          <div class="item-btn">
-            <a href="#"><b>Mua với </b> <span>80</span><img src="./images/rp.png" alt="rp"></a>
+          <div class="item-btn" data-toggle="modal" data-target="#mua-trung">
+            <a><b>Mua với </b> <span>80</span><img src="./images/rp.png" alt="rp"></a>
           </div>
           <div class="item-turn">
             Còn 4 lượt
@@ -219,10 +219,42 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="mua-trung" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <img src="./images/close-popup.png" alt="close-popup" class="close-popup">
+        </button>
+        <div class="container-popup popup-mua-trung">
+          <div class="title-popup">
+            Xác nhận mua trứng
+          </div>
+          <div class="btn-popup">
+            <a data-toggle="modal" data-target="#mua-thanh-cong" id="dong-y-mua-trung">Đồng ý</a>
+            <a data-dismiss="modal" aria-label="Close">Hủy</a>
+          </div>
+        </div>
+      </div>
+    </div><div class="modal fade" id="mua-thanh-cong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <img src="./images/close-popup.png" alt="close-popup" class="close-popup">
+        </button>
+        <div class="container-popup popup-mua-trung">
+          <div class="title-popup">
+            Đã mua trứng thành công
+          </div>
+          <div class="btn-popup">
+            <a data-dismiss="modal" aria-label="Close">Đóng</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <script src="./js/wow.min.js"></script>
   <script>
-    new WOW().init();
+    $("#dong-y-mua-trung").click(function(){
+      $('#mua-trung').modal('hide')
+    })
+
    </script>
   <script src="./js/script.js"></script>
 </body>

@@ -157,6 +157,10 @@ body{
   position: absolute;
   top: 66.67%;
   left: 9.095%;
+  transition: all 0.2s;
+}
+.item-btn:hover{
+  filter: drop-shadow(0px 5px 0px #A6550C)
 }
 .item-btn a{
   color: #fff;
@@ -164,6 +168,7 @@ body{
   justify-content: center;
   align-items: center;
   padding: 5% 0px 9%;
+  cursor: pointer;
 }
 .item-btn b{
   font-weight: 500;
@@ -260,7 +265,7 @@ button.close{
   background-image: url('../images/bg-popup.png');
   background-size: 100% 100%;
   margin-top: 3%;
-  margin-right: 15%;
+  margin-right: calc(50% - 470px);
 }
 .container-popup{
   padding: 3% 6% 0px;
@@ -325,6 +330,11 @@ button.close{
   background-image: url('../images/btn-popup.png');
   background-size: 100% 100%;
   padding: 2% 5%;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.btn-popup a:hover{
+  filter: drop-shadow(0px 5px 0px #A6550C)
 }
 .btn-popup a span{
   font-size: 20px;
@@ -365,4 +375,16 @@ button.close{
 .container-popup-ct::-webkit-scrollbar-thumb {
   background: #C89455; 
   border-radius: 5px;
+}
+.popup-mua-trung{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+}
+.popup-mua-trung .btn-popup{
+  margin-top: 20px;
+}
+.popup-mua-trung .btn-popup a{
+  display: inline-block;
 }
